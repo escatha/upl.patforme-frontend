@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #007bff;
+}
+
+.header p {
+  font-size: 16px;
+  color: #555;
+}
+
+.logout-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+/* Input Styles */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styles */
+.add-question-btn, .cancel-btn, .save-btn, .create-btn, .edit-btn, .submit-btn, .remove-question-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.add-question-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-question-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.create-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Question Card Styles */
+.question-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.question-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-textarea {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.question-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.option-input {
+  margin-left: 10px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.option-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.correct-indicator {
+  margin-left: 10px;
+  color: green;
+}
+
+/* Questionnaire List Styles */
+.questionnaires-list {
+  margin-top: 30px;
+}
+
+.questionnaire-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.questionnaire-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.questionnaire-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.approved-status {
+  color: green;
+}
+
+.rejected-status {
+  color: red;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.badge.draft {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.badge.submitted {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge.approved {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge.rejected {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  } 
+.input-field,
+.option-input,
+.question-textarea {
+  /* Exemple de styles */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
