@@ -1,9 +1,14 @@
+// src/api/apiClient.ts
 import axios from 'axios';
 
+const API_BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3001/api'
+    : 'https://upl-patforme-backend.onrender.com/api';
+
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3001/api', // ✅ Change ici si ton backend est sur le port 3001
-  // baseURL: 'http://localhost:5000/api', // ✅ ou ici si backend est sur le port 5000
-  timeout: 10000,
+  baseURL: API_BASE_URL,
+  withCredentials: true,
 });
 
 export default apiClient;
